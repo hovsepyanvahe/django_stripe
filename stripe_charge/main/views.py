@@ -14,7 +14,7 @@ class Home(View):
 
 class Charge(View):
     def post(self, request):
-        amount = 10
+        amount = int(request.POST.get('amount'))
 
         customer = stripe.Customer.create(
             email=request.POST.get('email'),
@@ -24,7 +24,7 @@ class Charge(View):
 
         charge = stripe.Charge.create(
             customer=customer,
-            amount=500,
+            amount=amount*100,
             currency='usd',
             description='Donation'
         )
