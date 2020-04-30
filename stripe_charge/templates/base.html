@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Stripe Integration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <link href="{% static 'custom.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+</head>
+
+{% block content %}
+
+{% endblock content %}
+
+<script src="{% static 'custom.js' %}"></script>
+
+</html>
